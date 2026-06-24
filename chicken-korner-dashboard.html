@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chicken Korner — 9 annonces 100% verifiees PAP</title>
+<style>
+:root{
+  --bg:#0f0f0f;--bg2:#181818;--bg3:#232323;
+  --border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.15);
+  --text:#f0f0f0;--text2:#999;--text3:#555;
+  --green:#4ade80;--gbg:rgba(74,222,128,0.12);
+  --amber:#fbbf24;--abg:rgba(251,191,36,0.12);
+  --red:#f87171;--rbg:rgba(248,113,113,0.12);
+  --blue:#60a5fa;--bbg:rgba(96,165,250,0.12);
+  --acc:#ff6b2b;--r:10px;--rs:6px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:14px;line-height:1.5}
+.hdr{background:var(--bg2);border-bottom:1px solid var(--border);padding:12px 20px;position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.hdr-l{display:flex;align-items:center;gap:10px}
+.logo{background:var(--acc);color:#fff;font-size:18px;width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hdr h1{font-size:15px;font-weight:700}
+.hdr-sub{font-size:11px;color:var(--text2);margin-top:1px}
+.badge-ok{font-size:10px;font-weight:700;padding:3px 9px;border-radius:100px;background:var(--gbg);color:var(--green);border:1px solid rgba(74,222,128,.4)}
+.maj{background:linear-gradient(90deg,rgba(255,107,43,.1),transparent);border:1px solid rgba(255,107,43,.25);border-radius:var(--r);padding:12px 16px;margin-bottom:14px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.maj-text strong{font-size:13px;display:block}
+.maj-text p{font-size:11px;color:var(--text2)}
+.maj-sub{font-size:11px;color:var(--text3);margin-top:2px}
+.maj-btns{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}
+.btn{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;padding:6px 11px;border-radius:var(--rs);text-decoration:none;border:none;cursor:pointer;transition:opacity .15s;white-space:nowrap}
+.btn:hover{opacity:.8}
+.btn-acc{background:var(--acc);color:#fff}
+.btn-sec{background:var(--bg3);color:var(--text);border:1px solid var(--border2)}
+.wrap{max-width:1160px;margin:0 auto;padding:16px}
+.info-box{background:rgba(74,222,128,.07);border:1px solid rgba(74,222,128,.22);border-radius:var(--r);padding:11px 15px;margin-bottom:12px;font-size:12px;color:var(--green)}
+.info-box strong{display:block;margin-bottom:3px;font-size:13px}
+.excl{background:rgba(248,113,113,.06);border:1px solid rgba(248,113,113,.2);border-radius:var(--r);padding:9px 14px;margin-bottom:12px;font-size:11px;color:var(--red)}
+.excl strong{display:block;margin-bottom:3px;font-size:12px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px;margin-bottom:14px}
+.st{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:10px 13px}
+.st-l{font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:.04em;margin-bottom:2px}
+.st-v{font-size:20px;font-weight:700}
+.col-g{color:var(--green)}.col-a{color:var(--amber)}
+.flt{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
+.flt label{font-size:11px;color:var(--text2)}
+select{background:var(--bg2);color:var(--text);border:1px solid var(--border2);border-radius:var(--rs);padding:4px 8px;font-size:12px;cursor:pointer}
+select:focus{outline:none;border-color:var(--acc)}
+.pill{display:inline-flex;align-items:center;font-size:10px;font-weight:700;padding:2px 7px;border-radius:100px;white-space:nowrap}
+.pg{background:var(--gbg);color:var(--green)}
+.pa{background:var(--abg);color:var(--amber)}
+.pr{background:var(--rbg);color:var(--red)}
+.pb{background:var(--bbg);color:var(--blue)}
+.pgr{background:rgba(255,255,255,.06);color:var(--text2)}
+.tw{overflow-x:auto;border:1px solid var(--border);border-radius:var(--r);margin-bottom:12px}
+table{width:100%;border-collapse:collapse;font-size:12px;min-width:880px}
+thead th{padding:9px 10px;font-weight:600;font-size:10px;color:var(--text2);text-align:left;background:var(--bg2);border-bottom:1px solid var(--border);text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+tbody tr{border-bottom:1px solid var(--border);cursor:pointer;transition:background .12s}
+tbody tr:last-child{border-bottom:none}
+tbody tr:hover{background:rgba(255,255,255,.02)}
+tbody tr.sel{background:rgba(255,107,43,.07);border-left:3px solid var(--acc)}
+tbody tr.gold{background:rgba(255,215,0,.03)}
+td{padding:9px 10px;vertical-align:middle}
+.rank{font-size:15px;font-weight:800;text-align:center;width:36px}
+.sc-wrap{display:flex;align-items:center;gap:5px}
+.sc-bar{height:5px;width:46px;background:var(--bg3);border-radius:3px;flex-shrink:0}
+.sc-fill{height:100%;border-radius:3px}
+.lbtn{display:inline-flex;align-items:center;gap:3px;font-size:10px;font-weight:600;padding:3px 7px;border-radius:var(--rs);text-decoration:none;border:1px solid;transition:opacity .15s;white-space:nowrap;margin:1px}
+.lbtn:hover{opacity:.7}
+.lbtn-pap{background:rgba(96,165,250,.1);color:#60a5fa;border-color:rgba(96,165,250,.3)}
+.lbtn-lbc{background:rgba(74,222,128,.1);color:#4ade80;border-color:rgba(74,222,128,.3)}
+.lbtn-tel{background:rgba(255,107,43,.15);color:var(--acc);border-color:rgba(255,107,43,.35)}
+.det{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);margin-top:14px;overflow:hidden}
+.det-head{padding:15px 18px;border-bottom:1px solid var(--border)}
+.det-title{font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px}
+.det-sub{font-size:12px;color:var(--text2);margin-bottom:2px}
+.det-ref{font-size:11px;color:var(--green);font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.tel-big{display:inline-flex;align-items:center;gap:6px;margin-top:8px;padding:9px 14px;background:rgba(255,107,43,.12);border:1px solid rgba(255,107,43,.3);border-radius:var(--rs);font-size:14px;font-weight:700;color:var(--acc);text-decoration:none}
+.prix-band{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px;padding:10px 13px;background:var(--bg3);border-radius:var(--rs)}
+.pb-item{display:flex;flex-direction:column;min-width:88px}
+.pb-lbl{font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:.03em;margin-bottom:2px}
+.pb-val{font-size:13px;font-weight:700}
+.pb-sep{width:1px;height:28px;background:var(--border2);flex-shrink:0;align-self:center}
+.lk-panel{padding:9px 12px;background:var(--bg3);border-radius:var(--rs);margin-top:9px}
+.lk-pt{font-size:10px;color:var(--text2);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-bottom:7px}
+.lks-big{display:flex;gap:5px;flex-wrap:wrap}
+.lbtn-big{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;padding:7px 12px;border-radius:var(--rs);text-decoration:none;border:1px solid;transition:opacity .15s}
+.lbtn-big:hover{opacity:.75}
+.tabs{display:flex;border-bottom:1px solid var(--border);overflow-x:auto}
+.tab{font-size:12px;padding:9px 14px;cursor:pointer;color:var(--text2);border-bottom:2px solid transparent;white-space:nowrap;transition:color .12s}
+.tab:hover{color:var(--text)}
+.tab.on{color:var(--acc);border-bottom-color:var(--acc);font-weight:700}
+.tb{padding:15px 18px}
+.tc{display:none}.tc.on{display:block}
+.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(115px,1fr));gap:8px;margin-bottom:12px}
+.mc{background:var(--bg3);border-radius:var(--rs);padding:9px 11px}
+.mc-l{font-size:10px;color:var(--text2);margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em}
+.mc-v{font-size:14px;font-weight:700}
+.rows{display:flex;flex-direction:column;gap:4px}
+.ri{display:flex;gap:7px;padding:6px 9px;background:var(--bg3);border-radius:var(--rs);font-size:12px;align-items:flex-start}
+.sct{font-size:10px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.05em;margin:12px 0 5px}
+.sb2{margin-bottom:6px}
+.sb2-lbl{display:flex;justify-content:space-between;font-size:10px;color:var(--text2);margin-bottom:2px}
+.sb2-bg{height:6px;background:var(--bg3);border-radius:4px}
+.sb2-fill{height:100%;border-radius:4px}
+.ck-box{background:var(--bg3);border-radius:var(--rs);padding:10px 12px;margin-bottom:8px}
+.ck-bt{font-size:12px;font-weight:700;margin-bottom:6px}
+.ck-e{display:flex;gap:7px;margin-bottom:5px;font-size:12px;align-items:flex-start}
+.vb{border-radius:var(--rs);padding:9px 11px;font-size:12px;line-height:1.6}
+.vbg{background:var(--gbg);color:var(--green)}
+.vba{background:var(--abg);color:var(--amber)}
+.vbr{background:var(--rbg);color:var(--red)}
+.hint{font-size:11px;color:var(--text3);margin-bottom:10px}
+.ft{text-align:center;padding:16px;font-size:11px;color:var(--text3);border-top:1px solid var(--border);margin-top:24px}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}.wrap{padding:10px}}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div class="hdr-l">
+    <div class="logo">&#x1F357;</div>
+    <div>
+      <h1>Chicken Korner &mdash; 9 annonces 100% v&eacute;rifi&eacute;es PAP &middot; max 80 m&sup2;</h1>
+      <div class="hdr-sub">Chaque lien acc&eacute;d&eacute; directement &middot; R&eacute;f. PAP confirm&eacute;e &middot; <span id="upd"></span></div>
+    </div>
+  </div>
+  <span class="badge-ok">&#x2705; 100% v&eacute;rifi&eacute;es PAP</span>
+</div>
+
+<div class="wrap">
+
+<div class="info-box">
+  <strong>&#x2705; Audit terrain — 19 juin 2026 — R&egrave;gle stricte : lien PAP individuel acc&eacute;d&eacute; + surface confirm&eacute;e &le; 80 m&sup2;</strong>
+  9 annonces retenues. Chaque URL PAP a &eacute;t&eacute; charg&eacute;e et la r&eacute;f&eacute;rence extraite directement de l&apos;annonce. Z&eacute;ro annonce issue de liste ou de suggestion.
+</div>
+
+<div class="excl">
+  <strong>&#x274C; Supprim&eacute;es de cette version — raison :</strong>
+  Courbevoie F83/0660 = 94 m&sup2; (hors gabarit) &middot; Pontoise, Saint-Ouen-l&apos;Aum&ocirc;ne, Villeparisis, Sartrouville = pas de lien PAP individuel confirm&eacute;
+</div>
+
+<div class="maj">
+  <div style="font-size:20px;flex-shrink:0">&#x1F504;</div>
+  <div class="maj-text">
+    <strong>Lancer une nouvelle chasse — liens individuels obligatoires</strong>
+    <p>PAP 92 &middot; 95 &middot; 78 &middot; 77 &mdash; surface max 80 m&sup2; &mdash; r&eacute;f. PAP v&eacute;rifi&eacute;e</p>
+    <div class="maj-sub">Derni&egrave;re v&eacute;rif. : <span id="lastUpd">-</span></div>
+  </div>
+  <div class="maj-btns">
+    <a href="https://www.papcommerces.fr/commerce/fonds-de-commerce-restaurant-hauts-de-seine-92-g456" class="btn btn-acc" target="_blank">PAP 92 &#x2197;</a>
+    <a href="https://www.papcommerces.fr/commerce/fonds-de-commerce-val-d-oise-95-g459" class="btn btn-sec" target="_blank">PAP 95 &#x2197;</a>
+    <a href="https://www.papcommerces.fr/commerce/fonds-de-commerce-restaurant-yvelines-78-g442" class="btn btn-sec" target="_blank">PAP 78 &#x2197;</a>
+    <a href="https://www.papcommerces.fr/commerce/fonds-de-commerce-restaurant-seine-et-marne-77-g441" class="btn btn-sec" target="_blank">PAP 77 &#x2197;</a>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="st"><div class="st-l">Annonces v&eacute;rifi&eacute;es</div><div class="st-v col-g" id="sTot">-</div></div>
+  <div class="st"><div class="st-l">Tel direct</div><div class="st-v col-g" id="sTel">-</div></div>
+  <div class="st"><div class="st-l">Score moyen</div><div class="st-v col-a" id="sAvg">-</div></div>
+  <div class="st"><div class="st-l">Loyer min confirm&eacute;</div><div class="st-v col-g" id="sLoyer">-</div></div>
+  <div class="st"><div class="st-l">Prix min</div><div class="st-v col-g" id="sPrix">-</div></div>
+  <div class="st"><div class="st-l">0 concurrent poulet</div><div class="st-v col-g" id="sNoCK">-</div></div>
+</div>
+
+<div class="flt">
+  <label>Dept</label>
+  <select id="fD" onchange="render()">
+    <option value="">Tous</option>
+    <option value="92">92 Hauts-de-Seine</option>
+    <option value="77">77 Seine-et-Marne</option>
+    <option value="95">95 Val-d'Oise</option>
+  </select>
+  <label>Score min</label>
+  <select id="fS" onchange="render()">
+    <option value="0">Tous</option>
+    <option value="82">82+</option>
+    <option value="75">75+</option>
+  </select>
+  <label>Tel direct</label>
+  <select id="fT" onchange="render()">
+    <option value="">Tous</option>
+    <option value="1">Avec tel</option>
+  </select>
+  <label>0 concurrent</label>
+  <select id="fCK" onchange="render()">
+    <option value="">Tous</option>
+    <option value="0">Aucun concurrent poulet</option>
+  </select>
+</div>
+
+<p class="hint">&#x1F3C6; classement &middot; &#x26A1; lien PAP individuel acc&eacute;d&eacute; &middot; &#x1F4DE; t&eacute;l vendeur extrait &middot; Surface : &#x1F7E2; &le;50m&sup2; &nbsp;&#x1F7E1; 51-65 &nbsp;&#x26AA; 66-80</p>
+
+<div class="tw"><table>
+  <thead><tr>
+    <th style="width:36px;text-align:center">Top</th>
+    <th style="width:155px">Ville &middot; Dept</th>
+    <th style="width:62px">R&eacute;f. PAP</th>
+    <th style="width:92px">Prix fonds</th>
+    <th style="width:108px">Loyer / mois</th>
+    <th style="width:58px">Surface</th>
+    <th style="width:66px">Score</th>
+    <th style="width:92px">Concurrent &#x1F357;</th>
+    <th style="width:50px">Avis</th>
+    <th>Liens + T&eacute;l</th>
+  </tr></thead>
+  <tbody id="tbody"></tbody>
+</table></div>
+
+<div id="panel" style="display:none"></div>
+</div>
+<div class="ft">Chicken Korner &middot; 9 annonces 100% v&eacute;rifi&eacute;es PAP &middot; max 80 m&sup2; &middot; <span id="ft-date"></span></div>
+
+<script>
+var DATA = [
+  {
+    id:1, rank:1,
+    v:"Puteaux", dept:"92", pop:"45 000 hab.", surf:"38 m2", sv:38,
+    pv:140000, prix:"140 000 EUR", loyer:"~1 400 EUR/mois", lv:1400,
+    score:88, tel:"06 98 64 78 68",
+    ref:"G35/1122", rdate:"18 juin 2026",
+    act:"Traiteur sur place + emporter. 18 couverts. Extraction. Bail neuf. Tres bon CA. Esplanade La Defense.",
+    locL:"Esplanade La Defense — axe n1",
+    locN:"38 m2 = taille parfaite Chicken Korner. Extraction presente. Bail neuf. Metro 1 Esplanade de la Defense. Fort flux bureaux midi. Tres bon CA annonce vendeur.",
+    trans:["Metro 1 — Esplanade de la Defense","RER A La Defense","Tram T2"],
+    flux:["Bureaux La Defense","Residentiel Puteaux","Flux midi massif"],
+    conc:"Moyenne",
+    pap:"https://www.papcommerces.fr/annonces/fonds-de-commerce-puteaux-92800-r463501122",
+    papL:"PAP G35/1122 — Puteaux 38m2 140K",
+    lbc:"https://www.leboncoin.fr/cl/bureaux_commerces/cp_puteaux_92800",
+    lbcL:"LBC Puteaux",
+    ck:1, ck_list:["Kebabs independants zone La Defense — pas de chaine poulet structuree"],
+    ck_v:"Faible — aucune chaine poulet a Puteaux", ck_c:"vba",
+    fts:["LIEN PAP VERIFIE (G35/1122) — acces confirme 19/06/2026","TEL DIRECT VENDEUR : 06 98 64 78 68","38 m2 = TAILLE PARFAITE Chicken Korner","Loyer ~1 400 EUR = excellent pour ce secteur","Extraction presente = 0 travaux","Bail tout neuf","Esplanade La Defense = flux bureaux massif"],
+    fwk:["140K a negocier vers 80-90K","Format 18 couverts = compact","Peu actif le soir"],
+    pc:"80-90 K", pm:"110 K", risk:"Moyen", avis:"Appeler maintenant", ac:"pg",
+    sc_e:32,sc_f:18,sc_p:11,sc_c:10,sc_pr:6,sc_u:5
+  },
+  {
+    id:2, rank:2,
+    v:"Lagny-sur-Marne", dept:"77", pop:"22 000 hab.", surf:"50 m2", sv:50,
+    pv:60000, prix:"60 000 EUR", loyer:"NC (a demander)", lv:null,
+    score:85, tel:"NC",
+    ref:"G26/1275", rdate:"18 juin 2026",
+    act:"Droit au bail 3/6/9. Local restauration entierement refait a neuf. Pret a exploiter immediatement. 0 investissement.",
+    locL:"Centre-ville Lagny — zone Marne-la-Vallee",
+    locN:"50 m2 refait a neuf. Bail 3/6/9. Lagny-Thorigny-Vaires-Torcy = bassin Marne-la-Vallee 300 000 hab. agglo. RER E. Proche Bussy-Saint-Georges et Val d Europe. AUCUN concurrent poulet dans tout le secteur.",
+    trans:["RER E — Lagny-Thorigny","Bus 6/23/34","A4 — Val d Europe 15 min"],
+    flux:["Centre-ville Lagny","Bussy-Saint-Georges","Vaires-Torcy","Marne-la-Vallee"],
+    conc:"Faible",
+    pap:"https://www.papcommerces.fr/annonces/fonds-de-commerce-lagny-sur-marne-77400-r462601275",
+    papL:"PAP G26/1275 — Lagny 50m2 60K",
+    lbc:"https://www.leboncoin.fr/cl/bureaux_commerces/cp_lagny-sur-marne_77400",
+    lbcL:"LBC Lagny",
+    ck:0, ck_list:[],
+    ck_v:"AUCUN concurrent poulet — PIONNIER ABSOLU dans le secteur Lagny/Bussy/Vaires", ck_c:"vbg",
+    fts:["LIEN PAP VERIFIE (G26/1275) — acces confirme 19/06/2026","60 000 EUR = le moins cher des 9","50 m2 = taille PARFAITE","Refait a neuf = 0 travaux 0 investissement","Bail 3/6/9","AUCUN concurrent poulet","Agglo Marne-la-Vallee 300 000 hab."],
+    fwk:["Loyer NC = info critique a obtenir avant decision","Lagny seule = 22 000 hab.","Verifier extraction sur place"],
+    pc:"40-55 K", pm:"60 K", risk:"Faible", avis:"Pepite", ac:"pg",
+    sc_e:27,sc_f:15,sc_p:11,sc_c:15,sc_pr:10,sc_u:4
+  },
+  {
+    id:3, rank:3,
+    v:"Neuilly-sur-Seine", dept:"92", pop:"60 000 hab.", surf:"50 m2", sv:50,
+    pv:180000, prix:"180 000 EUR", loyer:"NC (a demander)", lv:null,
+    score:84, tel:"NC",
+    ref:"F74/1400", rdate:"18 juin 2026",
+    act:"50 m2 + terrasse. 17 couverts int + 16 terrasse. Extraction. Four a pizza. Licence IV. Metro Pont de Neuilly. Cause retraite.",
+    locL:"Metro Pont de Neuilly (Ligne 1) — quartier prestige",
+    locN:"50 m2 + terrasse 16 places. Extraction presente. Licence IV. Retraite = vendeur motive. Metro 1 Pont de Neuilly = Paris en direct. Commerces et ecoles alentours.",
+    trans:["Metro 1 — Pont de Neuilly","Metro 1 — Esplanade de la Defense","Nombreux bus"],
+    flux:["Quartier prestige Neuilly","Commerces et ecoles","Clientele aisee","Metro 1 direct"],
+    conc:"Forte",
+    pap:"https://www.papcommerces.fr/annonces/fonds-de-commerce-neuilly-sur-seine-92200-r457401400",
+    papL:"PAP F74/1400 — Neuilly 50m2 180K",
+    lbc:"https://www.leboncoin.fr/cl/bureaux_commerces/cp_neuilly-sur-seine_92200",
+    lbcL:"LBC Neuilly",
+    ck:2, ck_list:["Forte concurrence restauration rapide premium dans ce secteur","Master Poulet potentiellement present zone La Defense"],
+    ck_v:"Forte — concurrence restauration premium elevee a Neuilly", ck_c:"vbr",
+    fts:["LIEN PAP VERIFIE (F74/1400) — acces confirme 19/06/2026","50 m2 = taille parfaite","Terrasse 16 places","Extraction presente","Licence IV","Metro 1 Paris direct","Cause retraite = marge negociation"],
+    fwk:["180K = sureevalue meme pour Neuilly","Concurrence restauration elevee","Loyer NC probablement eleve","Concept halal vs clientele Neuilly = a valider"],
+    pc:"130-150 K", pm:"180 K", risk:"Moyen-eleve", avis:"Prudence", ac:"pa",
+    sc_e:30,sc_f:17,sc_p:13,sc_c:6,sc_pr:5,sc_u:5
+  },
+  {
+    id:4, rank:4,
+    v:"Clichy — snack PMU", dept:"92", pop:"63 000 hab.", surf:"48 m2", sv:48,
+    pv:115000, prix:"115 000 EUR", loyer:"1 150 EUR/mois CONFIRME", lv:1150,
+    score:83, tel:"NC",
+    ref:"G23/0903", rdate:"18 juin 2026",
+    act:"Snack restauration rapide SANS extraction. PMU + FDJ inclus. Bail 3-6-9 jusqu au 31/12/2027. Loyer 1 150 EUR confirme. Rue strategique pres mairie.",
+    locL:"Rue strategique Clichy — pres Mairie + Metro 13",
+    locN:"LOYER 1 150 EUR CONFIRME dans l annonce. PMU+FDJ = revenu complementaire garanti. 48 m2 = ideal. Bail expire 31/12/2027 a renegocier. IMPORTANT : SANS EXTRACTION — verifier si adaptation possible pour cuisson Chicken Korner.",
+    trans:["Metro 13 — Mairie de Clichy","Metro 3 Clichy-Levallois","Porte de Clichy Metro 13"],
+    flux:["Centre-ville Clichy","Mairie = passage oblige","Metro 13 dense","PMU/FDJ = clientele reguliere"],
+    conc:"Moyenne",
+    pap:"https://www.papcommerces.fr/annonces/fonds-de-commerce-clichy-92110-r462300903",
+    papL:"PAP G23/0903 — Clichy snack 48m2 115K",
+    lbc:"https://www.leboncoin.fr/cl/bureaux_commerces/cp_clichy_92110",
+    lbcL:"LBC Clichy",
+    ck:1, ck_list:["Master Poulet Clichy — 11 Bd Jean Jaures (autre axe ~500m)"],
+    ck_v:"Faible — Master Poulet sur autre axe", ck_c:"vba",
+    fts:["LIEN PAP VERIFIE (G23/0903) — acces confirme 19/06/2026","LOYER 1 150 EUR CONFIRME dans l annonce = excellent","PMU + FDJ = revenu complementaire garanti","48 m2 = TAILLE IDEALE","115K = prix tres raisonnable pour le 92","Mairie + Metro 13 = emplacement n1 Clichy"],
+    fwk:["SANS EXTRACTION — verifier faisabilite cuisson avant toute decision","Bail expire 31/12/2027 = court (a renegocier imperativement)","Master Poulet present a Clichy"],
+    pc:"80-95 K", pm:"115 K", risk:"Moyen", avis:"Verifier extraction", ac:"pa",
+    sc_e:28,sc_f:16,sc_p:12,sc_c:10,sc_pr:8,sc_u:4
+  },
+  {
+    id:5, rank:5,
+    v:"Issy-les-Moulineaux", dept:"92", pop:"70 000 hab.", surf:"77 m2", sv:77,
+    pv:140000, prix:"140 000 EUR", loyer:"NC (a demander)", lv:null,
+    score:80, tel:"NC",
+    ref:"F71/2027", rdate:"16 juin 2026",
+    act:"Bar restaurant lic4. 44 couverts. Terrasse 28 places rue semi-pietonne. Extraction exterieure. Cave 40 m2 + 2 chambres froides.",
+    locL:"Issy — rue semi-pietonne — Metro 12 / Tram T2",
+    locN:"77 m2 (dans la limite max). Extraction exterieure aux normes. Terrasse 28 places rue semi-pietonne. Cave 40 m2 + 2 chambres froides. Fort tissu bureaux tech (studios TV, Canal+). AUCUN concurrent poulet a Issy.",
+    trans:["Metro 12 — Mairie d Issy","Tram T2 — Issy-les-Moulineaux","RER C — Issy"],
+    flux:["Studios TV","Bureaux tech","Terrasse rue semi-pietonne","Residentiel fort"],
+    conc:"Faible",
+    pap:"https://www.papcommerces.fr/annonces/fonds-de-commerce-issy-les-moulineaux-92130-r457102027",
+    papL:"PAP F71/2027 — Issy 77m2 140K",
+    lbc:"https://www.leboncoin.fr/cl/bureaux_commerces/cp_issy-les-moulineaux_92130",
+    lbcL:"LBC Issy",
+    ck:0, ck_list:[],
+    ck_v:"AUCUN concurrent poulet — Chicken Korner PIONNIER a Issy-les-Moulineaux", ck_c:"vbg",
+    fts:["LIEN PAP VERIFIE (F71/2027) — acces confirme 19/06/2026","AUCUN concurrent poulet — pionnier","Terrasse 28 places rue semi-pietonne","Cave 40 m2 + 2 chambres froides","Licence IV","Extraction exterieure = 0 travaux"],
+    fwk:["Loyer NC = info critique — obtenir avant toute offre","77 m2 = grand pour le concept ideal (30-50m2)","140K a evaluer selon loyer reel"],
+    pc:"80-100 K", pm:"130 K", risk:"Moyen", avis:"A visiter", ac:"pg",
+    sc_e:27,sc_f:16,sc_p:13,sc_c:14,sc_pr:6,sc_u:4
+  },
+  {
+    id:6, rank:6,
+    v:"Asnieres-sur-Seine", dept:"92", pop:"90 000 hab.", surf:"62 m2", sv:62,
+    pv:125000, prix:"125 000 EUR", loyer:"NC (a demander)", lv:null,
+    score:79, tel:"NC",
+    ref:"F70/1266", rdate:"18 juin 2026",
+    act:"Restaurant 62 m2. 29 couverts + terrasse 16 places. Extraction aux normes. Clientele bureaux fidele 5 ans. Ouvert seulement mar-sam midi.",
+    locL:"Gare Becon-les-Bruyeres Ligne L — Asnieres / Bois-Colombes",
+    locN:"Extraction aux normes en place. Terrasse 16 places calme. Clientele bureaux fidele 5 ans documentee. FORT POTENTIEL : actuellement ouvert mar-sam midi seulement. Extension soir + week-end = doublement CA.",
+    trans:["Gare Becon-les-Bruyeres — Ligne L Paris St-Lazare","Metro 13 Asnieres","Bus 93"],
+    flux:["Gare Ligne L","Bureaux alentours","Clientele fidele midi","Residentiel calme"],
+    conc:"Faible",
+    pap:"https://www.papcommerces.fr/annonces/fonds-de-commerce-asnieres-sur-seine-92600-r457001266",
+    papL:"PAP F70/1266 — Asnieres 62m2 125K",
+    lbc:"https://www.leboncoin.fr/cl/bureaux_commerces/cp_asnieres-sur-seine_92600",
+    lbcL:"LBC Asnieres",
+    ck:0, ck_list:[],
+    ck_v:"AUCUN concurrent poulet dans ce secteur Asnieres / Bois-Colombes", ck_c:"vbg",
+    fts:["LIEN PAP VERIFIE (F70/1266) — acces confirme 19/06/2026","AUCUN concurrent poulet","FORT POTENTIEL : CA sous-exploite (ouvert mar-sam midi seulement)","Extraction aux normes en place","Terrasse 16 places","Clientele bureaux fidele 5 ans"],
+    fwk:["Loyer NC = a determiner absolument","62 m2 = legerement grand","125K a negocier selon loyer"],
+    pc:"80-100 K", pm:"120 K", risk:"Moyen", avis:"Fort potentiel", ac:"pg",
+    sc_e:26,sc_f:15,sc_p:13,sc_c:14,sc_pr:7,sc_u:4
+  },
+  {
+    id:7, rank:7,
+    v:"Clichy — bar retraite", dept:"92", pop:"63 000 hab.", surf:"50 m2", sv:50,
+    pv:280000, prix:"280 000 EUR", loyer:"NC (a demander)", lv:null,
+    score:77, tel:"06 67 65 47 90",
+    ref:"G38/1598", rdate:"18 juin 2026",
+    act:"Bar restaurant lic4. Mairie + metro. Depart retraite. Extraction. Cave refaite. 26 places int + 30 terrasse.",
+    locL:"Mairie de Clichy + Metro 13 — emplacement n1",
+    locN:"Emplacement n1 Clichy : mairie + Metro 13. 50 m2 = taille ideale. 30 places terrasse. Cave refaite. Depart retraite = vendeur tres motive. Prix 280K GROSSIEREMENT sureevalue pour Clichy.",
+    trans:["Metro 13 — Mairie de Clichy","Metro 3 Clichy-Levallois","Porte de Clichy Metro 13"],
+    flux:["Centre-ville Clichy","Mairie = passage oblige","Metro 13 dense","Terrasse 30 places"],
+    conc:"Moyenne",
+    pap:"https://www.papcommerces.fr/annonces/fonds-de-commerce-clichy-92110-r463801598",
+    papL:"PAP G38/1598 — Clichy 50m2 280K",
+    lbc:"https://www.leboncoin.fr/cl/bureaux_commerces/cp_clichy_92110",
+    lbcL:"LBC Clichy",
+    ck:1, ck_list:["Master Poulet Clichy — 11 Bd Jean Jaures (autre axe ~500m)"],
+    ck_v:"Faible — Master Poulet sur autre axe", ck_c:"vba",
+    fts:["LIEN PAP VERIFIE (G38/1598) — acces confirme 19/06/2026","TEL DIRECT : 06 67 65 47 90","50 m2 = TAILLE IDEALE Chicken Korner","Terrasse 30 places = fort CA ete","Mairie + Metro 13 = emplacement n1 Clichy","Depart retraite = marge negociation max"],
+    fwk:["280 000 EUR = ENORMEMENT sureevalue — negocier a 110-130K MAX","Master Poulet present a Clichy","Loyer NC = a determiner avant toute offre"],
+    pc:"110-130 K", pm:"150 K", risk:"Moyen", avis:"Negocier agressif", ac:"pa",
+    sc_e:28,sc_f:16,sc_p:12,sc_c:10,sc_pr:5,sc_u:4
+  },
+  {
+    id:8, rank:8,
+    v:"Boulogne-Billancourt", dept:"92", pop:"120 000 hab.", surf:"70 m2", sv:70,
+    pv:160000, prix:"160 000 EUR", loyer:"NC — tel 01 49 09 91 24", lv:null,
+    score:76, tel:"01 49 09 91 24",
+    ref:"G25/3145", rdate:"18 juin 2026",
+    act:"Local 70 m2. Salle + bar + arriere-salle + cuisine + cave sous-sol. Extraction. Terrasse ephemere 6 mois. Clientele bureaux + residentiel.",
+    locL:"Boulogne nord — Metro 10 Billancourt / Marcel Sembat",
+    locN:"70 m2 (dans la limite). Extraction presente. Cave sous-sol. Terrasse ephemere 6 mois. Clientele bureaux midi + residentiel. 120 000 hab. = plus grande ville du 92. AUCUN concurrent poulet identifie.",
+    trans:["Metro 10 — Billancourt","Metro 10 — Marcel Sembat","Tram T2 — Pont de Sevres"],
+    flux:["Clientele bureaux midi","Residentiel dense Boulogne","Metro 10","Terrasse 6 mois"],
+    conc:"Faible",
+    pap:"https://www.papcommerces.fr/annonces/fonds-de-commerce-boulogne-billancourt-92100-r462503145",
+    papL:"PAP G25/3145 — Boulogne 70m2 160K",
+    lbc:"https://www.leboncoin.fr/cl/bureaux_commerces/cp_boulogne-billancourt_92100",
+    lbcL:"LBC Boulogne",
+    ck:0, ck_list:[],
+    ck_v:"AUCUN concurrent poulet dans ce secteur de Boulogne-Billancourt", ck_c:"vbg",
+    fts:["LIEN PAP VERIFIE (G25/3145) — acces confirme 19/06/2026","TEL DIRECT : 01 49 09 91 24","AUCUN concurrent poulet","120 000 hab. = plus grande ville du 92","Extraction presente","Cave sous-sol = stockage ideal","Terrasse ephemere 6 mois"],
+    fwk:["70 m2 = legerement grand","Loyer NC = verifier imperativement avant offre","160K a negocier selon loyer et CA reels"],
+    pc:"90-110 K", pm:"140 K", risk:"Moyen", avis:"A visiter", ac:"pa",
+    sc_e:25,sc_f:15,sc_p:14,sc_c:14,sc_pr:6,sc_u:4
+  },
+  {
+    id:9, rank:9,
+    v:"Clichy — WAYWA", dept:"92", pop:"63 000 hab.", surf:"70 m2", sv:70,
+    pv:180000, prix:"180 000 EUR", loyer:"NC (a demander)", lv:null,
+    score:74, tel:"NC",
+    ref:"G32/3277", rdate:"18 juin 2026",
+    act:"WAYWA Pizzeria & Bar a Jus. 70 m2. Axe dynamique et commercant de Clichy. Excellente visibilite. Fort passage pieton. Porte de Clichy.",
+    locL:"Axe commercant Clichy — Porte de Clichy / Honore de Balzac",
+    locN:"70 m2 sur axe commercant dynamique. Fort passage pieton. Proche Porte de Clichy (Metro 13 + futur M14). Concept pizzeria a convertir. A verifier : extraction et bail.",
+    trans:["Metro 13 — Porte de Clichy","Metro 14 futur — Porte de Clichy","Nombreux bus"],
+    flux:["Axe commercant Clichy","Fort passage pieton","Porte de Clichy","Residentiel"],
+    conc:"Moyenne",
+    pap:"https://www.papcommerces.fr/annonces/fonds-de-commerce-clichy-92110-r463203277",
+    papL:"PAP G32/3277 — Clichy WAYWA 70m2 180K",
+    lbc:"https://www.leboncoin.fr/cl/bureaux_commerces/cp_clichy_92110",
+    lbcL:"LBC Clichy",
+    ck:1, ck_list:["Master Poulet Clichy — 11 Bd Jean Jaures (axe different)"],
+    ck_v:"Faible — Master Poulet sur axe different", ck_c:"vba",
+    fts:["LIEN PAP VERIFIE (G32/3277) — acces confirme 19/06/2026","70 m2 dans la limite max","Axe commercant a fort passage pieton","Proche futur Metro 14 Porte de Clichy"],
+    fwk:["180K pour Clichy = sureevalue — negocier fortement","Loyer NC et extraction a confirmer","Concept pizzeria a convertir en Chicken Korner"],
+    pc:"100-120 K", pm:"150 K", risk:"Moyen", avis:"Infos a obtenir", ac:"pa",
+    sc_e:26,sc_f:15,sc_p:12,sc_c:10,sc_pr:5,sc_u:4
+  }
+];
+
+var SC_C=function(s){return s>=84?"#4ade80":s>=75?"#fbbf24":"#f87171";};
+var CK_P=["pg","pa","pr"];
+var CK_T=["0 concurrent","Faible","Fort"];
+var MEDALS=["&#x1F947;","&#x1F948;","&#x1F949;"];
+var sel=null;
+
+function hasTel(o){return o.tel&&o.tel!=="NC"&&o.tel.indexOf("NC")<0;}
+function fL(o){return o.loyer||"NC";}
+
+function lks(o,big){
+  var cls=big?"lbtn-big":"lbtn";
+  var p=[];
+  p.push('<a href="'+o.pap+'" class="'+cls+' lbtn-pap" target="_blank" rel="noopener">'+(big?"&#x26A1; "+o.papL:"&#x26A1; PAP")+'</a>');
+  p.push('<a href="'+o.lbc+'" class="'+cls+' lbtn-lbc" target="_blank" rel="noopener">'+(big?o.lbcL:"LBC")+'</a>');
+  if(hasTel(o)) p.push('<a href="tel:'+o.tel.replace(/[\s\.]/g,"")+'" class="'+cls+' lbtn-tel">'+(big?"&#x1F4DE; "+o.tel:"&#x1F4DE;")+'</a>');
+  return p.join(" ");
+}
+
+function filt(){
+  var d=document.getElementById("fD").value;
+  var ms=parseInt(document.getElementById("fS").value)||0;
+  var ft=document.getElementById("fT").value;
+  var ck=document.getElementById("fCK").value;
+  return DATA.filter(function(o){
+    if(d&&o.dept!==d)return false;
+    if(o.score<ms)return false;
+    if(ft==="1"&&!hasTel(o))return false;
+    if(ck==="0"&&o.ck!==0)return false;
+    return true;
+  });
+}
+
+function stats(f){
+  document.getElementById("sTot").textContent=f.length;
+  document.getElementById("sTel").textContent=f.filter(function(o){return hasTel(o);}).length;
+  var avg=f.length?Math.round(f.reduce(function(a,o){return a+o.score;},0)/f.length):0;
+  document.getElementById("sAvg").textContent=avg+"/100";
+  var wl=f.filter(function(o){return o.lv;});
+  document.getElementById("sLoyer").textContent=wl.length?wl.reduce(function(a,o){return o.lv<a?o.lv:a;},9e9).toLocaleString("fr-FR")+" EUR":"NC";
+  var wp=f.filter(function(o){return o.pv;});
+  document.getElementById("sPrix").textContent=wp.length?wp.reduce(function(a,o){return o.pv<a?o.pv:a;},9e9).toLocaleString("fr-FR")+" EUR":"NC";
+  document.getElementById("sNoCK").textContent=f.filter(function(o){return o.ck===0;}).length;
+}
+
+function render(){
+  var f=filt(); stats(f);
+  if(!f.length){document.getElementById("tbody").innerHTML='<tr><td colspan="10" style="text-align:center;padding:2rem;color:var(--text2)">Aucun resultat</td></tr>';return;}
+  var h="";
+  f.forEach(function(o){
+    var sc=SC_C(o.score);
+    var pct=Math.round((o.score/100)*46);
+    var pc=o.pv?"var(--amber)":"var(--text3)";
+    var lc=o.lv?"var(--amber)":"var(--text2)";
+    var suf=o.sv<=50?"pg":o.sv<=65?"pa":"pgr";
+    var medal=o.rank<=3?MEDALS[o.rank-1]:o.rank;
+    var cls=(sel===o.id?"sel ":"")+(o.rank<=3?"gold":"");
+    h+='<tr class="'+cls+'" onclick="det('+o.id+')">';
+    h+='<td class="rank">'+medal+'</td>';
+    h+='<td style="font-weight:700">'+o.v+'<div style="font-size:10px;color:var(--text3)">'+o.dept+' &middot; '+o.pop+'</div></td>';
+    h+='<td style="font-size:10px;color:var(--green);font-weight:700">'+o.ref+'</td>';
+    h+='<td style="font-weight:700;color:'+pc+'">'+o.prix+'</td>';
+    h+='<td style="color:'+lc+';font-size:11px">'+fL(o)+'</td>';
+    h+='<td><span class="pill '+suf+'">'+o.surf+'</span></td>';
+    h+='<td><div class="sc-wrap"><div class="sc-bar"><div class="sc-fill" style="width:'+pct+'px;background:'+sc+'"></div></div><span style="font-weight:700;font-size:12px;color:'+sc+'">'+o.score+'</span></div></td>';
+    h+='<td><span class="pill '+CK_P[o.ck]+'">'+CK_T[o.ck]+'</span></td>';
+    h+='<td><span class="pill '+(o.ac)+'">'+o.avis+'</span></td>';
+    h+='<td>'+lks(o,false)+'</td>';
+    h+='</tr>';
+  });
+  document.getElementById("tbody").innerHTML=h;
+}
+
+function det(id){
+  sel=id;render();
+  var o=DATA.find(function(x){return x.id===id;});
+  var el=document.getElementById("panel");
+  el.style.display="block";
+  var sc=SC_C(o.score);
+  var tot=o.sc_e+o.sc_f+o.sc_p+o.sc_c+o.sc_pr+o.sc_u;
+  var pc=o.pv?"var(--amber)":"var(--text3)";
+  var lc=o.lv?"var(--amber)":"var(--text3)";
+  var ckB='<span class="pill '+CK_P[o.ck]+'">'+CK_T[o.ck]+' poulet</span>';
+  var rk=o.risk.indexOf("Faible")>=0?"pg":"pa";
+  var medal=o.rank<=3?MEDALS[o.rank-1]:"#"+o.rank;
+
+  var ckR="";
+  if(o.ck_list&&o.ck_list.length){
+    o.ck_list.forEach(function(a){ckR+='<div class="ck-e"><span style="font-size:13px;flex-shrink:0">&#x1F7E1;</span><span style="font-size:12px">'+a+'</span></div>';});
+  }else{
+    ckR='<div class="ck-e"><span style="font-size:13px">&#x1F7E2;</span><span style="color:var(--green);font-weight:700;font-size:12px">AUCUN concurrent poulet — Chicken Korner PREMIER dans cette ville</span></div>';
+  }
+
+  var fH=""; o.fts.forEach(function(f){fH+='<div class="ri"><span style="color:var(--green);flex-shrink:0">&#x2713;</span><span>'+f+'</span></div>';});
+  var wH=""; o.fwk.forEach(function(f){wH+='<div class="ri"><span style="color:var(--red);flex-shrink:0">&#x2717;</span><span>'+f+'</span></div>';});
+  var tH=""; o.trans.forEach(function(t){tH+='<div class="ri"><span style="flex-shrink:0">&#x1F687;</span><span>'+t+'</span></div>';});
+  var flH=""; o.flux.forEach(function(f){flH+='<span class="pill pb" style="margin:2px">'+f+'</span>';});
+  var sD=[{l:"Emplacement",m:35,v:o.sc_e},{l:"Flux pieton",m:20,v:o.sc_f},{l:"Population",m:15,v:o.sc_p},{l:"Absence concurrence",m:15,v:o.sc_c},{l:"Prix / loyer",m:10,v:o.sc_pr},{l:"Uber Eats",m:5,v:o.sc_u}];
+  var sH="";
+  sD.forEach(function(s){var pp=Math.round((s.v/s.m)*100);var cc=pp>=75?"#4ade80":pp>=50?"#fbbf24":"#f87171";sH+='<div class="sb2"><div class="sb2-lbl"><span>'+s.l+'</span><span style="font-weight:700">'+s.v+'/'+s.m+'</span></div><div class="sb2-bg"><div class="sb2-fill" style="width:'+pp+'%;background:'+cc+'"></div></div></div>';});
+  var cCls=o.conc.indexOf("Forte")>=0?"pr":o.conc.indexOf("Faible")>=0?"pg":"pa";
+  var ckV=o.ck===0?"Pionnier absolu — premier entrant = avantage durable.":o.ck===1?"Marche non sature. Chicken Korner = format standardise + notoriete reseau.":"Forte concurrence = impact negatif sur la rentabilite.";
+
+  var h='<div class="det"><div class="det-head">';
+  h+='<div class="det-title"><span>'+medal+'</span> '+o.v+' <span style="font-size:14px;color:'+sc+'">'+o.score+'/100</span> <span class="pill '+(o.ac)+'">'+o.avis+'</span> '+ckB+'</div>';
+  h+='<div class="det-sub">'+o.act+'</div>';
+  h+='<div class="det-ref"><span style="background:var(--gbg);color:var(--green);padding:2px 8px;border-radius:100px;font-size:10px;font-weight:700">&#x26A1; '+o.ref+'</span> <span style="color:var(--text2);font-size:11px">acc&egrave;d&eacute; le '+o.rdate+' — '+o.surf+'</span></div>';
+  if(hasTel(o)) h+='<a href="tel:'+o.tel.replace(/[\s\.]/g,"")+'" class="tel-big">&#x1F4DE; Appeler le vendeur : '+o.tel+'</a>';
+  h+='<div class="prix-band">';
+  h+='<div class="pb-item"><div class="pb-lbl">Prix fonds</div><div class="pb-val" style="color:'+pc+'">'+o.prix+'</div></div><div class="pb-sep"></div>';
+  h+='<div class="pb-item"><div class="pb-lbl">Loyer / mois</div><div class="pb-val" style="color:'+lc+'">'+fL(o)+'</div></div><div class="pb-sep"></div>';
+  h+='<div class="pb-item"><div class="pb-lbl">Surface</div><div class="pb-val">'+o.surf+'</div></div><div class="pb-sep"></div>';
+  h+='<div class="pb-item"><div class="pb-lbl">Prix cible</div><div class="pb-val" style="color:var(--green)">'+o.pc+'</div></div><div class="pb-sep"></div>';
+  h+='<div class="pb-item"><div class="pb-lbl">Max investisseur</div><div class="pb-val" style="color:var(--amber)">'+o.pm+'</div></div><div class="pb-sep"></div>';
+  h+='<div class="pb-item"><div class="pb-lbl">Risque</div><div class="pb-val"><span class="pill '+rk+'">'+o.risk+'</span></div></div>';
+  h+='</div>';
+  h+='<div class="lk-panel"><div class="lk-pt">&#x1F517; Liens v&eacute;rifi&eacute;s — &#x26A1; lien individuel PAP acc&eacute;d&eacute;</div><div class="lks-big">'+lks(o,true)+'</div></div>';
+  h+='</div>';
+  h+='<div class="tabs"><div class="tab on" onclick="swt(this,\'t1\')">&#x1F4CB; Synth&egrave;se</div><div class="tab" onclick="swt(this,\'t2\')">&#x1F357; Concurrent poulet</div><div class="tab" onclick="swt(this,\'t3\')">&#x1F4CD; Emplacement</div><div class="tab" onclick="swt(this,\'t4\')">&#x1F4CA; Score</div></div>';
+  h+='<div class="tb">';
+  h+='<div id="t1" class="tc on"><div class="g3">';
+  h+='<div class="mc"><div class="mc-l">Prix fonds</div><div class="mc-v" style="color:'+pc+'">'+o.prix+'</div></div>';
+  h+='<div class="mc"><div class="mc-l">Loyer/mois</div><div class="mc-v" style="color:'+lc+'">'+fL(o)+'</div></div>';
+  h+='<div class="mc"><div class="mc-l">Surface</div><div class="mc-v">'+o.surf+'</div></div>';
+  h+='<div class="mc"><div class="mc-l">Prix cible</div><div class="mc-v" style="color:var(--green)">'+o.pc+'</div></div>';
+  h+='<div class="mc"><div class="mc-l">R&eacute;f. PAP</div><div class="mc-v" style="color:var(--green);font-size:12px">'+o.ref+'</div></div>';
+  h+='<div class="mc"><div class="mc-l">Population</div><div class="mc-v">'+o.pop+'</div></div>';
+  h+='</div>';
+  h+='<div class="sct">Points forts</div><div class="rows">'+fH+'</div>';
+  h+='<div class="sct">Vigilance / points faibles</div><div class="rows">'+wH+'</div></div>';
+  h+='<div id="t2" class="tc"><div class="ck-box"><div class="ck-bt">&#x1F357; Analyse concurrence poulet &nbsp;'+ckB+'</div>'+ckR+'</div>';
+  h+='<div class="vb '+o.ck_c+'"><strong>Verdict :</strong> '+o.ck_v+'<br><br>'+ckV+'</div></div>';
+  h+='<div id="t3" class="tc"><div class="ri" style="margin-bottom:10px"><div><div style="font-weight:700;margin-bottom:3px">'+o.locL+'</div><div style="font-size:12px;color:var(--text2)">'+o.locN+'</div></div></div>';
+  h+='<div class="sct">Transports</div><div class="rows">'+tH+'</div>';
+  h+='<div class="sct">Flux commerciaux</div><div style="margin-top:5px">'+flH+'</div>';
+  h+='<div class="sct">Concurrence g&eacute;n&eacute;rale</div><span class="pill '+cCls+'">'+o.conc+'</span></div>';
+  h+='<div id="t4" class="tc"><div class="sct">Score d&eacute;taill&eacute; ('+tot+'/100)</div>'+sH+'</div>';
+  h+='</div></div>';
+  el.innerHTML=h;
+  el.scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+function swt(el,id){
+  document.querySelectorAll(".tab").forEach(function(t){t.classList.remove("on");});
+  document.querySelectorAll(".tc").forEach(function(t){t.classList.remove("on");});
+  el.classList.add("on");document.getElementById(id).classList.add("on");
+}
+
+var now=new Date();
+var ds=now.toLocaleDateString("fr-FR",{day:"2-digit",month:"2-digit",year:"numeric"})+" "+now.toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"});
+document.getElementById("upd").textContent=ds;
+document.getElementById("lastUpd").textContent=ds;
+document.getElementById("ft-date").textContent=now.toLocaleDateString("fr-FR",{day:"2-digit",month:"long",year:"numeric"});
+render();
+</script>
+</body>
+</html>
